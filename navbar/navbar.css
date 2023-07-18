@@ -15,10 +15,12 @@ body {
 .navbar {
   overflow: hidden;
   background-color: var(--secondary-color);
-  width: 30%;
+  width: 50%;
   margin: 10px auto 0 auto;
   border-radius: 10px;
   text-align: center;
+  max-width: 500px;
+  min-width: 400px;
 }
 
 .navbar a {
@@ -46,24 +48,30 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+  .navbar {
+    width: 70%;
+    min-width: 100px;
+  }
+  
   .navbar a {
     display: none;
   }
+
   .navbar a.icon {
     float: right;
     display: block;
   }
-}
 
-@media screen and (max-width: 600px) {
   .navbar.responsive {
     position: relative;
   }
+
   .navbar.responsive .icon {
     position: absolute;
     right: 0;
     top: 0;
   }
+
   .navbar.responsive a {
     float: none;
     display: block;
